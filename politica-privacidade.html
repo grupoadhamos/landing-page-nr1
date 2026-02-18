@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de Privacidade da Adhamos - Como coletamos, usamos e protegemos seus dados pessoais em conformidade com a LGPD">
+    <title>Política de Privacidade | Adhamos - Riscos Psicossociais NR-1</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --dark-gray: #484848;
+            --teal-dark: #006465;
+            --teal-medium: #0f928c;
+            --teal-light: #00c9d2;
+            --lime-green: #beee3b;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal-medium) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--teal-dark);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .back-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-5px);
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem 3rem;
+        }
+        
+        .content-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 100, 101, 0.1);
+        }
+        
+        h1 {
+            color: var(--teal-dark);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .last-update {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .intro {
+            background: linear-gradient(135deg, var(--teal-light) 0%, var(--teal-medium) 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+        
+        h2 {
+            color: var(--teal-dark);
+            font-size: 1.75rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        h2::before {
+            content: '';
+            width: 5px;
+            height: 30px;
+            background: var(--lime-green);
+            border-radius: 3px;
+        }
+        
+        h3 {
+            color: var(--teal-medium);
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: #4b5563;
+            line-height: 1.8;
+        }
+        
+        ul {
+            margin: 1rem 0 1.5rem 2rem;
+            color: #4b5563;
+        }
+        
+        ul li {
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--lime-green);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid var(--teal-light);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+        }
+        
+        .highlight-box strong {
+            color: var(--teal-dark);
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal-medium) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2.5rem;
+            text-align: center;
+        }
+        
+        .contact-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-box p {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .section-icon {
+            color: var(--teal-light);
+            margin-right: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .content-card {
+                padding: 2rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .back-link {
+                font-size: 0.9rem;
+                padding: 0.6rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="https://adhamos.com.br" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-shield-heart"></i>
+                </div>
+                <span class="logo-text">ADHAMOS</span>
+            </a>
+            <a href="https://adhamos.com.br" class="back-link">
+                <i class="fas fa-arrow-left"></i>
+                Voltar ao Site Principal
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content-card">
+            <h1>Política de Privacidade</h1>
+            <div class="last-update">
+                <i class="fas fa-calendar-alt"></i>
+                Última atualização: 18 de fevereiro de 2026
+            </div>
+
+            <div class="intro">
+                <p><strong>A Adhamos</strong> respeita sua privacidade e está comprometida em proteger seus dados pessoais. Esta Política de Privacidade explica como coletamos, usamos, armazenamos e protegemos suas informações em conformidade com a <strong>Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)</strong>.</p>
+            </div>
+
+            <h2><i class="section-icon fas fa-info-circle"></i> 1. Quem Somos</h2>
+            <p>A <strong>Adhamos</strong> é uma empresa especializada em consultoria para adequação à NR-1 (Riscos Psicossociais), auxiliando empresas na avaliação e gestão dos 13 fatores obrigatórios de riscos psicossociais no ambiente de trabalho.</p>
+            <p><strong>Responsável pelo Tratamento de Dados:</strong> Adhamos Consultoria</p>
+            <p><strong>Contato para questões de privacidade:</strong> grupoadhamos@gmail.com</p>
+
+            <h2><i class="section-icon fas fa-database"></i> 2. Quais Dados Coletamos</h2>
+            <p>Coletamos apenas os dados estritamente necessários para prestar nossos serviços e entrar em contato com você. Através do formulário de solicitação de diagnóstico gratuito em nosso site, coletamos:</p>
+            
+            <ul>
+                <li><strong>Nome Completo:</strong> para identificação e personalização da comunicação</li>
+                <li><strong>Cargo:</strong> para direcionar o atendimento adequado</li>
+                <li><strong>E-mail Corporativo:</strong> para envio de informações e contato comercial</li>
+                <li><strong>Telefone/WhatsApp:</strong> para comunicação direta e agendamento</li>
+                <li><strong>Nome da Empresa:</strong> para contextualização do serviço</li>
+                <li><strong>Número de Funcionários:</strong> para dimensionamento do escopo de trabalho</li>
+                <li><strong>Principais Desafios (opcional):</strong> para personalização do diagnóstico</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong><i class="fas fa-exclamation-circle"></i> Importante:</strong> Não coletamos dados sensíveis (como informações sobre saúde, orientação sexual, dados biométricos, etc.) através de nossos formulários.</p>
+            </div>
+
+            <h2><i class="section-icon fas fa-cog"></i> 3. Como Usamos Seus Dados</h2>
+            <p>Utilizamos seus dados pessoais exclusivamente para as seguintes finalidades:</p>
+            
+            <ul>
+                <li><strong>Contato Comercial:</strong> responder à sua solicitação de diagnóstico gratuito</li>
+                <li><strong>Prestação de Serviços:</strong> realizar o diagnóstico de riscos psicossociais solicitado</li>
+                <li><strong>Envio de Informações:</strong> compartilhar conteúdos educativos sobre NR-1 e riscos psicossociais</li>
+                <li><strong>Propostas Comerciais:</strong> enviar orçamentos e propostas de serviços de consultoria</li>
+                <li><strong>Agendamento:</strong> marcar reuniões e consultas conforme sua disponibilidade</li>
+                <li><strong>Comunicação:</strong> manter contato durante o processo de consultoria</li>
+            </ul>
+
+            <h3>Base Legal para o Tratamento</h3>
+            <p>O tratamento de seus dados está fundamentado nas seguintes bases legais previstas na LGPD:</p>
+            <ul>
+                <li><strong>Consentimento:</strong> você fornece seus dados voluntariamente ao preencher nosso formulário</li>
+                <li><strong>Execução de Contrato:</strong> para prestação dos serviços de consultoria solicitados</li>
+                <li><strong>Legítimo Interesse:</strong> para prospecção comercial e relacionamento com clientes</li>
+            </ul>
+
+            <h2><i class="section-icon fas fa-shield-alt"></i> 4. Compartilhamento de Dados</h2>
+            <p><strong>A Adhamos NÃO compartilha, vende ou aluga seus dados pessoais a terceiros.</strong></p>
+            <p>Seus dados são de uso exclusivo da Adhamos para as finalidades descritas nesta política. Em casos excepcionais, podemos compartilhar dados com:</p>
+            
+            <ul>
+                <li><strong>Prestadores de Serviços:</strong> empresas que nos auxiliam com infraestrutura tecnológica (ex: hospedagem de site, serviço de e-mail), sempre sob rigorosos contratos de confidencialidade</li>
+                <li><strong>Autoridades Legais:</strong> quando exigido por lei, ordem judicial ou requisição de autoridades competentes</li>
+            </ul>
+
+            <h2><i class="section-icon fas fa-lock"></i> 5. Como Protegemos Seus Dados</h2>
+            <p>Adotamos medidas técnicas e organizacionais para proteger seus dados pessoais contra acesso não autorizado, perda, destruição ou alteração:</p>
+            
+            <ul>
+                <li><strong>Criptografia SSL/TLS:</strong> nosso site utiliza certificado de segurança (HTTPS)</li>
+                <li><strong>Acesso Restrito:</strong> somente colaboradores autorizados têm acesso aos dados</li>
+                <li><strong>Armazenamento Seguro:</strong> utilizamos serviços confiáveis e seguros para armazenamento</li>
+                <li><strong>Backups Regulares:</strong> realizamos cópias de segurança periódicas</li>
+                <li><strong>Políticas Internas:</strong> temos procedimentos internos de segurança da informação</li>
+            </ul>
+
+            <h2><i class="section-icon fas fa-clock"></i> 6. Prazo de Armazenamento</h2>
+            <p>Mantemos seus dados pessoais apenas pelo tempo necessário para cumprir as finalidades descritas:</p>
+            
+            <ul>
+                <li><strong>Solicitações não convertidas:</strong> até 12 meses após o último contato</li>
+                <li><strong>Clientes ativos:</strong> durante a prestação do serviço e conforme obrigações legais</li>
+                <li><strong>Dados fiscais/contratuais:</strong> conforme exigido pela legislação (5 anos ou mais)</li>
+            </ul>
+            
+            <p>Após esses períodos, seus dados serão excluídos ou anonimizados de forma segura.</p>
+
+            <h2><i class="section-icon fas fa-user-check"></i> 7. Seus Direitos (LGPD)</h2>
+            <p>De acordo com a LGPD, você possui os seguintes direitos sobre seus dados pessoais:</p>
+            
+            <ul>
+                <li><strong>Confirmação e Acesso:</strong> saber se tratamos seus dados e solicitar uma cópia</li>
+                <li><strong>Correção:</strong> atualizar dados incompletos, incorretos ou desatualizados</li>
+                <li><strong>Anonimização, Bloqueio ou Eliminação:</strong> solicitar a exclusão de dados desnecessários</li>
+                <li><strong>Portabilidade:</strong> receber seus dados em formato estruturado e legível</li>
+                <li><strong>Revogação do Consentimento:</strong> cancelar o consentimento a qualquer momento</li>
+                <li><strong>Informação sobre Compartilhamento:</strong> saber com quem seus dados foram compartilhados</li>
+                <li><strong>Oposição:</strong> opor-se ao tratamento de dados em determinadas situações</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong><i class="fas fa-info-circle"></i> Como Exercer Seus Direitos:</strong> Para exercer qualquer um desses direitos, entre em contato conosco através do e-mail <strong>grupoadhamos@gmail.com</strong>. Responderemos sua solicitação em até 15 dias úteis.</p>
+            </div>
+
+            <h2><i class="section-icon fas fa-cookie-bite"></i> 8. Cookies e Tecnologias de Rastreamento</h2>
+            <p>Nosso site utiliza cookies e tecnologias similares para:</p>
+            
+            <ul>
+                <li><strong>Essenciais:</strong> garantir o funcionamento básico do site</li>
+                <li><strong>Analytics:</strong> entender como os visitantes navegam em nosso site (Google Analytics)</li>
+                <li><strong>Marketing:</strong> medir a eficácia de campanhas publicitárias (Facebook Pixel)</li>
+            </ul>
+            
+            <p>Você pode desabilitar cookies nas configurações do seu navegador, mas isso pode afetar a funcionalidade do site.</p>
+
+            <h2><i class="section-icon fas fa-child"></i> 9. Crianças e Adolescentes</h2>
+            <p>Nossos serviços são direcionados a empresas e profissionais (B2B). Não coletamos intencionalmente dados de menores de 18 anos. Se tomarmos conhecimento de coleta inadvertida, excluiremos os dados imediatamente.</p>
+
+            <h2><i class="section-icon fas fa-sync-alt"></i> 10. Alterações nesta Política</h2>
+            <p>Podemos atualizar esta Política de Privacidade periodicamente para refletir mudanças em nossas práticas ou na legislação. A data da última atualização está sempre indicada no início desta página.</p>
+            <p>Mudanças significativas serão comunicadas por e-mail aos nossos contatos cadastrados.</p>
+
+            <h2><i class="section-icon fas fa-gavel"></i> 11. Legislação Aplicável</h2>
+            <p>Esta Política de Privacidade é regida pela legislação brasileira, especialmente:</p>
+            <ul>
+                <li>Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)</li>
+                <li>Marco Civil da Internet (Lei nº 12.965/2014)</li>
+                <li>Código de Defesa do Consumidor (Lei nº 8.078/1990)</li>
+            </ul>
+
+            <div class="contact-box">
+                <h3><i class="fas fa-envelope"></i> Fale Conosco</h3>
+                <p>Dúvidas, sugestões ou solicitações relacionadas à privacidade e proteção de dados?</p>
+                <div class="contact-info">
+                    <a href="mailto:grupoadhamos@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        grupoadhamos@gmail.com
+                    </a>
+                    <a href="https://adhamos.com.br" class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        www.adhamos.com.br
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Adhamos - Todos os direitos reservados | Consultoria em Riscos Psicossociais NR-1</p>
+        <p style="margin-top: 0.5rem;">
+            <i class="fas fa-shield-alt" style="color: var(--teal-medium);"></i>
+            Desenvolvido em conformidade com a LGPD
+        </p>
+    </footer>
+
+    <script>
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight ao clicar em links de email
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                this.style.background = 'rgba(190, 238, 59, 0.3)';
+                setTimeout(() => {
+                    this.style.background = '';
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
