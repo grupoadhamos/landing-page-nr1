@@ -39,7 +39,7 @@
                     <div class="stat-label">Multa Máxima/pessoa</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">365</div>
+                    <div class="stat-number">120</div>
                     <div class="stat-label">Dias para adequar</div>
                 </div>
             </div>
@@ -269,7 +269,7 @@
                     <p>Receba uma avaliação completa da situação da sua empresa em relação aos Riscos Psicossociais da NR-1</p>
                 </div>
                 
-                <form id="leadForm" class="lead-form" action="https://formspree.io/f/mgolznzj" method="POST">
+               <form id="leadForm" class="lead-form" onsubmit="return enviarFormulario(event)">
 
                     <div class="form-row">
                         <div class="form-group">
@@ -710,5 +710,60 @@
     </footer>
 
     <script src="js/main.js"></script>
+  <script>
+async function enviarFormulario(event) {
+    event.preventDefault();
+    
+    const form = document.getElementById('leadForm');
+    const dados = {
+        nome: form.nome.value,
+        cargo: form.cargo.value,
+        email: form.email.value,
+        telefone: form.telefone.value,
+        empresa: form.empresa.value,
+        funcionarios: form.funcionarios.value,
+        mensagem: form.mensagem ? form.mensagem.value : ''
+    };
+    
+    const url = 'https://script.google.com/macros/s/AKfycbwUX8-gs8AEU5MUSuEZCLTRSl_Kd68W3dTIryMGW2Y73Jww_FaWEprrx4Ag4xTpph-1XA/exec';
+    
+    const botao = form.querySelector('button[type="submit"]');
+    const textoOriginal = botao.innerHTML;
+    botao.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+    botao.disabled = true;
+    
+    try {
+        await fetch(url, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dados)
+        });
+        
+        const formWrapper = document.querySelector('.form-wrapper');
+        formWrapper.innerHTML = `
+            <div style="text-align: center; padding: 60px 20px; background: white; border-radius: 20px;">
+                <div style="width: 80px; height: 80px; background: #beee3b; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-check" style="font-size: 40px; color: #484848;"></i>
+                </div>
+                <h2 style="color: #006465; margin-bottom: 15px; font-size: 28px;">Solicitação Enviada com Sucesso!</h2>
+                <p style="color: #484848; font-size: 18px; line-height: 1.6;">
+                    Nossa equipe entrará em contato em até 24 horas para agendar seu diagnóstico.
+                </p>
+            </div>
+        `;
+        
+    } catch (error) {
+        botao.innerHTML = textoOriginal;
+        botao.disabled = false;
+        alert('⚠️ Erro ao enviar. Por favor, tente novamente.');
+        console.error('Erro:', error);
+    }
+    
+    return false;
+}
+</script>
 </body>
 </html>
